@@ -184,5 +184,10 @@ form input[type="submit"] {
 	margin-top: 15px;
 /* 	border: 1px solid black; */
 /* 	color: white; */
+}
 
+form span {
+	font-size: 12px;
+	font-weight: bold;
+	color: red;
 }

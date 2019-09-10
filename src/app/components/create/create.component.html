@@ -5,27 +5,47 @@
     <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
         <p>
             <label for="name">Name: </label>
-            <input type="text" name="name=" #name="ngModel" [(ngModel)]="project.name">
+            <input type="text" name="name=" #name="ngModel" [(ngModel)]="project.name" required>
+            <br>
+            <span *ngIf="name.touched && !name.valid">
+                Campo obligatorio
+            </span>
         </p>
 
         <p>
             <label for="description">Description: </label>
-            <textarea name="description=" #description="ngModel" [(ngModel)]="project.description"></textarea>
+            <textarea name="description=" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+            <br>
+            <span *ngIf="description.touched && !description.valid">
+                Campo obligatorio
+            </span>
         </p>
 
         <p>
             <label for="category">Category: </label>
-            <input type="text" name="category=" #category="ngModel" [(ngModel)]="project.category">
+            <input type="text" name="category=" #category="ngModel" [(ngModel)]="project.category" required>
+            <br>
+            <span *ngIf="category.touched && !category.valid">
+                Campo obligatorio
+            </span>
         </p>
 
         <p>
             <label for="year">Year: </label>
-            <input type="text" name="year=" #year="ngModel" [(ngModel)]="project.year">
+            <input type="text" name="year=" #year="ngModel" [(ngModel)]="project.year" required>
+            <br>
+            <span *ngIf="year.touched && !year.valid">
+                Campo obligatorio
+            </span>
         </p>
 
         <p>
             <label for="langs">Langs: </label>
-            <input type="text" name="langs=" #langs="ngModel" [(ngModel)]="project.langs">
+            <input type="text" name="langs=" #langs="ngModel" [(ngModel)]="project.langs" required>
+            <br>
+            <span *ngIf="langs.touched && !langs.valid">
+                Campo obligatorio
+            </span>
         </p>
 
         <p>
@@ -33,7 +53,7 @@
             <input type="file" name="image=" #image="ngModel" [(ngModel)]="project.image">
         </p>
 
-        <button type="submit" value="Submit">Submit</button>
+        <button type="submit" value="Submit" [disabled]="!projectForm.form.valid">Submit</button>
     </form>
 
 </div>
