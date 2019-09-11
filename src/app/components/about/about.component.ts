@@ -10,8 +10,8 @@ export class AboutComponent implements OnInit {
   public subtitle: string;
   public email: string;
   constructor() {
-    this.title = 'Diego Muñoz';
-    this.subtitle = 'Desarrollador web';
+    this.title = 'Heaven & Hell';
+    this.subtitle = 'Eliquids';
     this.email = 'd.munozmauro@hotmail.com';
   }
 

@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container" *ngIf="project">
 
     <h2>{{title}}</h2>
 
     <div class="message success" *ngIf="status == 'success'">
-        El proyecto se ha creado correctamente.
+        El proyecto se ha actualizado correctamente.
     </div>
 
     <div class="message failed" *ngIf="status == 'failed'">
@@ -59,8 +59,12 @@
         <p>
             <label for="image">Imgage: </label>
 
+            <!-- <span *ngIf="project.image">
+                <img src="{{url + 'get-image/' + project.image}}" *ngIf="project.image" style="width: 100%;">
+            </span>
+
             <input type="file" name="image=" #image="ngModel" [(ngModel)]="project.image"
-                (change)="fileChangeEvent($event)">
+                (change)="fileChangeEvent($event)"> -->
         </p>
 
         <button type="submit" value="Submit" [disabled]="!projectForm.form.valid">Submit</button>

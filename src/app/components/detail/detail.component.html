@@ -1,0 +1,17 @@
+<div class="container" *ngIf="proyecto">
+
+
+    <div class="image" *ngIf="proyecto.image">
+        <img src="{{url + 'get-image/' + proyecto.image}}" *ngIf="proyecto.image">
+    </div>
+
+    <div class="data">
+        <h1>{{proyecto.name}}</h1>
+        <h3>{{proyecto.description}}</h3>
+        <p>{{proyecto.category}}</p>
+        <p>{{proyecto.langs}}</p>
+        <p>{{proyecto.year}}</p>
+        <button class="button-edit" [routerLink]="['/edit', proyecto._id]">Editar</button>
+        <button class="button-delete" (click)="deleteProject(proyecto._id)">Eliminar</button>
+    </div>
+</div>
