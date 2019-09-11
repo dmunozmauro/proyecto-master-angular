@@ -2,6 +2,14 @@
 
     <h2>{{title}}</h2>
 
+    <div class="message success" *ngIf="status == 'success'">
+        El proyecto se ha creado correctamente.
+    </div>
+
+    <div class="message failed" *ngIf="status == 'failed'">
+        Ha ocurrido un error.
+    </div>
+
     <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
         <p>
             <label for="name">Name: </label>
@@ -50,7 +58,7 @@
 
         <p>
             <label for="image">Imgage: </label>
-            <input type="file" name="image=" #image="ngModel" [(ngModel)]="project.image">
+            <input type="file" name="image=" #image="ngModel" [(ngModel)]="project.image" (change)="fileChangeEvent($event)">
         </p>
 
         <button type="submit" value="Submit" [disabled]="!projectForm.form.valid">Submit</button>

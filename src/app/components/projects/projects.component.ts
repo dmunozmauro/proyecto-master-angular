@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
-import { $ } from 'protractor';
+import { Global } from 'src/app/services/global';
 
 @Component({
   selector: 'app-projects',
@@ -10,15 +10,24 @@ import { $ } from 'protractor';
   providers: [ProjectService]
 })
 export class ProjectsComponent implements OnInit {
-  public project: Project;
-  constructor( private _projectService: ProjectService ) {
-    this.project = new Project('', '', '', '', '', 2019, '');
+  public projects: Project;
+  public url: string;
+
+  constructor(private _projectService: ProjectService) {
+    this.url = Global.url;
   }
 
   ngOnInit() {
+    this.getProjects();
+  }
+
+  getProjects() {
     this._projectService.getProjects().subscribe(
       res => {
-        console.log(res);
+        if (res.projects) {
+          this.projects = res.projects;
+          console.log(this.projects);
+        }
       },
       err => {
         console.log(err);

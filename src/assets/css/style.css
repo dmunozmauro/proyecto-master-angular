@@ -16,6 +16,7 @@ body {
 }
 
 /*nav bar - header*/
+
 header {
 	display: block;
 	width: 100%;
@@ -38,6 +39,7 @@ header ul li {
 	text-align: center;
 	line-height: 90px;
 }
+
 header a {
 	display: block;
 	padding-right: 20px;
@@ -53,8 +55,7 @@ header a:hover {
 	color: black;
 }
 
-header a:hover,
-.actived {
+header a:hover, .actived {
 	background: white;
 	color: black;
 }
@@ -95,6 +96,7 @@ footer {
 }
 
 /* about */
+
 #title {
 	width: 70%;
 	margin: 0px auto;
@@ -145,6 +147,7 @@ article.about {
 }
 
 /* seccion form */
+
 .container {
 	padding: 50px;
 	padding-top: 10px;
@@ -168,26 +171,44 @@ form label {
 	margin-bottom: 5px;
 }
 
-form input[type="text"],
-form input[type="number"],
-form input[type="email"],
-form textarea {
+form input[type="text"], form input[type="number"], form input[type="email"], form textarea {
 	width: 80%;
 	padding: 5px;
 }
 
-form button,
-form input[type="submit"] {
+form button, form input[type="submit"] {
 	display: block;
 	font-size: 17px;
 	padding: 5px;
 	margin-top: 15px;
-/* 	border: 1px solid black; */
-/* 	color: white; */
+	/* 	border: 1px solid black; */
+	/* 	color: white; */
 }
 
 form span {
 	font-size: 12px;
 	font-weight: bold;
 	color: red;
+}
+
+.project {
+	list-style: none;
+	display: block;
+	float: left;
+	width: 25%;
+	text-align: center;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 50px;
+}
+
+.project .image {
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+	margin-top: 30px;
+}
+
+.project img {
+	width: 100%;
 }
