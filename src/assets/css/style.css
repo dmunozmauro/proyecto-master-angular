@@ -20,7 +20,7 @@ body {
 header {
 	display: block;
 	width: 100%;
-	height: 90px;
+	height: 60px;
 	background: black;
 	position: fixed;
 	text-transform: uppercase;
@@ -35,9 +35,11 @@ header ul {
 
 header ul li {
 	display: inline-block;
-	margin: 0px auto;
-	text-align: center;
-	line-height: 90px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 70px;
+	margin-top: -10px;
+
 }
 
 header a {
@@ -195,11 +197,11 @@ form span {
 	list-style: none;
 	display: block;
 	float: left;
-	width: 25%;
+	width: 28%;
 	text-align: center;
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-bottom: 50px;
+	margin-left: 23px;
+    margin-right: 23px;
+    margin-bottom: 25px;
 }
 
 .project .image {
